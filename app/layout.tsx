@@ -1,14 +1,20 @@
 
-@import "tailwindcss";
+import type { Metadata } from "next";
+import "./globals.css";
 
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+export const metadata: Metadata = {
+  title: "Alamgir Kumkum | Creative Portfolio",
+  description: "Graphic Designer and Multimedia Executive",
+};
 
-body {
-  margin: 0;
-  background: #101114;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
